@@ -29,11 +29,11 @@ def main():
             kouka_rct.move_ip((0, +1))
         if key_lst[pg.K_LEFT]:
             kouka_rct.move_ip((-1, 0))
-        else:
-            kouka_rct.move_ip((-1, 0))
         if key_lst[pg.K_RIGHT]:
             kouka_rct.move_ip((+1, 0))
-
+        else:
+            kouka_rct.move_ip((-1, 0))
+            
         x = tmr%3200
         screen.blit(bg_img, [-x, 0])#練習5画像を移動
         screen.blit(bg_img2, [-x+1600, 0])

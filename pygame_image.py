@@ -23,16 +23,22 @@ def main():
         key_lst = pg.key.get_pressed()
         #練習10　矢印キーで動く処理を決めている
         #画像は下方向が＋上方向が-
+        n = 0
+        m = 0
+        kouka_rct.move_ip((n, m))
         if key_lst[pg.K_UP]:
-            kouka_rct.move_ip((0, -1))
+           m = -1
         if key_lst[pg.K_DOWN]:
-            kouka_rct.move_ip((0, +1))
+           m = +1
         if key_lst[pg.K_LEFT]:
-            kouka_rct.move_ip((-1, 0))
-        if key_lst[pg.K_RIGHT]:
-            kouka_rct.move_ip((+1, 0))
+           n = -1
         else:
-            kouka_rct.move_ip((-1, 0))
+           n = -1
+        if key_lst[pg.K_RIGHT]:
+           n = +1
+        
+        
+        kouka_rct.move_ip((n, m))
             
         x = tmr%3200
         screen.blit(bg_img, [-x, 0])#練習5画像を移動

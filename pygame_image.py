@@ -29,6 +29,8 @@ def main():
             kouka_rct.move_ip((0, +1))
         if key_lst[pg.K_LEFT]:
             kouka_rct.move_ip((-1, 0))
+        else:
+            kouka_rct.move_ip((-1, 0))
         if key_lst[pg.K_RIGHT]:
             kouka_rct.move_ip((+1, 0))
 
